@@ -1,0 +1,433 @@
+/* Color de fondo general */
+/* definicion de variables */
+:root {
+    --margin-page: 7%;
+}
+
+/* LOGIN Section */
+/* Narrow the login form */
+#loginPage .readOnlyContent,
+#loginPage form {
+  max-width: 22em;
+}
+
+/* Hide "please login" text, margin is to prevent login form moving too far up */
+#loginPage h1 {
+  display: none;
+}
+
+#loginPage .padded-left.padded-right.padded-bottom-page {
+  margin-top: 50px;
+}
+
+/* Hide "manual" and "forgot" buttons */
+#loginPage .raised.cancel.block.btnManual.emby-button {
+  display: none;
+}
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button {
+  display: none;
+}
+
+.dialog,
+html {
+  background-color: #181818;
+}
+
+/****************************************************************
+                        LAYOUT DESKTOP 
+****************************************************************/
+/* header section */
+.skinHeader.semiTransparent {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.skinHeader-withBackground {
+    background-color: transparent;
+}
+
+/* removemos info innecesaria */
+.layout-desktop .detailImageContainer .card,
+.layout-desktop .itemTags,
+.layout-desktop .itemExternalLinks,
+.layout-desktop form.trackSelections,
+.layout-desktop .itemName.originalTitle {
+  display: none;
+}
+
+/* reposicionando elementos */
+.layout-desktop .detailLogo {
+    left: var(--margin-page);
+    background-position: top left;
+    top: 38vh;
+}
+
+.layout-desktop .itemBackdrop {
+    height: 70vh;
+}
+
+.layout-desktop .detailRibbon {
+    background: none;
+}
+
+.layout-desktop .detailPagePrimaryContainer,
+.layout-desktop .detailPageContent {
+    padding-left: var(--margin-page);
+}
+
+.detailPageSecondaryContainer {
+    margin: 0;
+}
+
+.backgroundContainer.withBackdrop {
+    background-color: rgba(0, 0, 0, 0.62);
+}
+
+.withSectionTabs .backgroundContainer.withBackdrop {
+    background-color: #181818!important;
+}
+
+.layout-desktop .detailPageWrapperContainer {
+    background: linear-gradient(0deg, black, transparent);
+}
+
+.layout-desktop .detailPagePrimaryContent {
+    width: 60%;
+}
+
+.layout-desktop .detailButton {
+    /*border: 2px solid #cecece;*/
+    border-radius: 2em;
+    font-weight: bold;
+    /*width: 7vw;*/
+    background-color: rgba(255, 255, 255, 0.20);
+    padding: 1em 2em!important;
+    margin-right: 3%!important;
+    color: rgb(255, 255, 255);
+}
+
+.layout-desktop .detailButton:hover {
+    background-color: #ffffff; 
+    color: #181818;
+}
+
+/* btns remove icons */
+.layout-desktop .material-icons.detailButton-icon.play_arrow,
+.layout-desktop .material-icons.detailButton-icon.replay {
+    display: none;
+}
+
+/* btns adding text */
+.layout-desktop .btnPlay::after {
+    content : attr(title);
+    /*margin: 0 10px 0 2px;*/
+}
+
+/*material-icons detailButton-icon replay*/
+.layout-desktop .btnReplay::after {
+    content : attr(title);
+    /*margin: 0 10px 0 2px;*/
+}
+
+.layout-desktop .btntheaters::after {
+    content : attr(title);
+    /*margin: 0 10px 0 2px;*/
+}
+
+.layout-desktop .detailButton {
+    flex-direction: row;
+}
+
+.layout-desktop .detailRibbon {
+    height: unset!important;
+}
+
+.layout-desktop .detailPagePrimaryContainer {
+    /*-webkit-align-content: center;*/
+    align-content: flex-start;
+    /*-webkit-align-items: center;*/
+    /*display: -webkit-flex;*/
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.layout-desktop h3.itemName {
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.layout-desktop .itemMiscInfo, .nameContainer {
+    margin-bottom: 0.5em;
+}
+
+.layout-desktop .tagline,
+.layout-desktop #seriesAirTime {
+    display: none;
+}
+
+.layout-desktop .detail-clamp-text {
+    -webkit-line-clamp: 4;
+}
+
+/*  season section  */
+.layout-desktop .vertical-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+  
+.layout-desktop .listItem-withContentWrapper {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 32%;
+}
+  
+.layout-desktop .listItem-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+  
+.layout-desktop .listItemImage-large {
+    height: 16vw;
+    width: 100%;
+}
+
+.layout-desktop .listItem-withContentWrapper:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+/****************************************************************
+                        LAYOUT MOBILE 
+****************************************************************/
+.layout-mobile .headerHomeButton,
+.layout-mobile .headerCastButton,
+.layout-mobile .headerSyncButton {
+    display: none;
+}
+
+.layout-mobile .mainDrawerButton {
+  display: block!important;
+}
+
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {
+  background: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {
+  background: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.headerTabs.sectionTabs {
+  text-size-adjust: 110%;
+  font-size: 110%;
+}
+.pageTitle {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.emby-tab-button {
+  padding: 1.75em 1.7em;
+}
+
+/* Seccion Peliculas/Series */
+
+.layout-mobile .itemTags,
+.layout-mobile .itemExternalLinks,
+.layout-mobile .trackSelections,
+.layout-mobile .itemName.originalTitle,
+.layout-mobile .directorsGroup,
+.layout-mobile .writersGroup,
+#seriesAirTime {
+    display: none;
+}
+
+/* Quitamos imagen de poster */
+.layout-mobile .detailImageContainer .card,
+.layout-mobile .detailImageContainer .card.backdropCard,
+.layout-mobile .detailImageContainer .card.squareCard {
+    top: auto;
+    display: none;
+}
+
+/* Mostrando Logo y posicionandolo */
+.layout-mobile .detailLogo {
+    display: block;
+    width: 15em;
+    left: 5%;
+    top: 17vh;
+}
+
+/* Mismo color de fondo a franja gris */
+.detailRibbon {
+    background: rgba(32, 32, 32, 0);
+}
+
+/* Sipnosis tamano de 5 lineas */
+.detail-clamp-text {
+    -webkit-line-clamp: 4;
+}
+
+
+.layout-mobile .infoWrapper {
+    padding-left: 0;
+    margin-top: 6em;
+}
+
+.layout-mobile .itemMiscInfo,
+.layout-mobile .itemName,
+.layout-mobile .mainDetailButtons,
+.layout-mobile .parentName {
+    text-align: left;
+}
+
+.layout-mobile .itemMiscInfo, 
+.layout-mobile .itemName, 
+.layout-mobile .mainDetailButtons, 
+.layout-mobile .parentName {
+    justify-content: left;
+    text-align: left;
+}
+
+/* Titulo Original y removiendo el titulo actual */
+.layout-mobile .itemName.parentNameLast.withOriginalTitle {
+    margin: 0.6em 0;
+}
+
+/* moviendo a la Izq Contenedor de botones de pelicula*/
+.layout-mobile .mainDetailButtons {
+    padding-left: 0;
+}
+
+/* arregalndo padding y margin y aumentando tamano de fanart y agregando degradado */
+.layout-mobile .itemBackdrop {
+    height: 40vh;/*30*/
+    margin-top: 0;
+}
+
+.layout-mobile .itemBackdrop::before {
+    content: '';
+    right: 0;
+    left: 0;
+    /*top: 0;*/
+    bottom: 0;
+    height: 25vh;
+    position: absolute;
+    z-index: -1;
+    /*background: linear-gradient(0deg, #181818 15%, #18181800 65%);*/
+    background: linear-gradient(0deg, #181818 10%, #18181800 65%);
+}
+
+.layout-mobile .detailPageWrapperContainer {
+  top: -5em;
+}
+
+.layout-mobile .infoWrapper {
+    margin-top: 0;
+}
+
+.layout-mobile .itemName.parentNameLast.withOriginalTitle {
+    margin: 0 0 0.6em 0;
+}
+
+.layout-mobile .detailPageSecondaryContainer {
+    margin: 0 0 1em 0;
+}
+
+.layout-mobile .overview-expand {
+    padding: 0 1em 0.3em 1em;
+}
+
+/* play boton */
+.layout-mobile .mainDetailButtons {
+  margin-top: 1.5em;
+}
+
+.layout-mobile .btnPlay {
+  border-radius: 2em;
+  /*width: 7vw;*/
+  background-color: white;
+  /*padding: 0.4em!important;*/
+  /*margin-right: 30%!important;*/
+}
+
+.layout-mobile .btnPlay::after {
+  content : attr(title);
+  margin: 0 10px 0 2px;
+  color: black;
+}
+
+.layout-mobile .btnPlay.detailButton {
+  flex-direction: row;
+}
+
+.layout-mobile .btnShuffle,
+.layout-desktop .btnShuffle {
+  display: none;
+}
+
+.layout-mobile .material-icons.detailButton-icon.play_arrow {
+  color: black;
+}
+
+.layout-mobile .listViewUserDataButtons {
+  display: none;
+}
+
+.layout-mobile .listItem-content {
+  display: block;
+}
+
+.layout-mobile .listItem-content .listItemBody {
+  padding: 0.85em 0;
+}
+
+.layout-mobile .listItem-content .listItemImage-large {
+  height: 30vw;
+  width: 86vw;
+}
+
+.layout-mobile .listItem-content .listItemImage-large .listItemImageButton, .listItemIndicators {
+  font-size: 1em!important;
+}
+
+.layout-mobile .listItem-bottomoverview {
+  font-size: 100%;
+}
+
+.layout-mobile .detailPagePrimaryContent {
+  position: relative;
+  margin-top: 1em;
+}
+
+/****************************************************************
+                        LAYOUT general 
+****************************************************************/
+  /* cast & crew circular */
+#castContent .cardImageContainer.coveredImage.cardContent.itemAction.lazy.non-blurhashable,
+#castContent .cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground1.cardContent.itemAction {
+  border-radius: 50%;
+}
+
+#castContent .cardPadder.cardPadder-overflowPortrait,
+#castContent .cardPadder-mixedPortrait, 
+#castContent .cardPadder-overflowPortrait, 
+#castContent .cardPadder-portrait, 
+#castContent .overflowPortraitCard-textCardPadder {
+  border-radius: 50%;
+  padding-bottom: 100%;
+}
+
+#castContent .cardOverlayContainer {
+  border-radius: 50%;
+}
+
+#castContent .cardOverlayButton-br {
+  bottom: 0;
+  position: absolute;
+  left: 38%;
+}
