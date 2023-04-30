@@ -1,0 +1,2 @@
+# jellyfin
+Landscape Theme
